@@ -1,0 +1,33 @@
+name: Bug report
+description: Report a reproducible product or platform defect.
+title: "[Bug] "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is broken?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Minimal steps to reproduce.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Which users, environments or suite contracts are affected?
+    validations:
+      required: true
+  - type: checkboxes
+    id: contracts
+    attributes:
+      label: Shared contracts
+      options:
+        - label: IAM may be affected
+        - label: Billing may be affected
+        - label: Data/schema ownership may be affected
