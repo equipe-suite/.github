@@ -1,0 +1,32 @@
+name: Change request
+description: Propose a product, platform or cross-suite change.
+title: "[Change] "
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What should be true after this change?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Which repositories, products or platform contracts change?
+    validations:
+      required: true
+  - type: textarea
+    id: migration
+    attributes:
+      label: Migration / compatibility
+      description: Describe compatibility, rollout and rollback considerations.
+  - type: checkboxes
+    id: gates
+    attributes:
+      label: Required gates
+      options:
+        - label: IAM review
+        - label: Billing review
+        - label: Data contract review
+        - label: Production postflight
